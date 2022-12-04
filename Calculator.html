@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Calculator</title>
-        <link rel="stylesheet" href="Calculator.css">
-    </head>
-    <body>
-        <div class="title">Calculator</div>
-        <table border="0">
-            <tr>
-                <td colspan="3"><input type="text" id="result"></td>
-                <td><input type="button" value="c" onclick="clr()"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="1" onclick="display('1')"></td>
-                <td><input type="button" value="2" onclick="display('2')"></td>
-                <td><input type="button" value="3" onclick="display('3')"></td>
-                <td><input type="button" value="/" onclick="display('/')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="4" onclick="display('4')"></td>
-                <td><input type="button" value="5" onclick="display('5')"></td>
-                <td><input type="button" value="6" onclick="display('6')"></td>
-                <td><input type="button" value="-" onclick="display('-')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="7" onclick="display('7')"></td>
-                <td><input type="button" value="8" onclick="display('8')"></td>
-                <td><input type="button" value="9" onclick="display('9')"></td>
-                <td><input type="button" value="+" onclick="display('+')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="." onclick="display('.')"></td>
-                <td><input type="button" value="0" onclick="display('0')"></td>
-                <td><input type="button" value="=" onclick="equate('=')"></td>
-                <td><input type="button" value="*" onclick="display('*')"></td>
-            </tr>
-        </table>
-        <script type="text/javascript" src="Calculator.js"></script>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Calculator.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B/W Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc dark">
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div id="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" id="clear">C</button></td>
+                        <td><button class="btn-operator" id="/">&divide;</button></td>
+                        <td><button class="btn-operator" id="*">&times;</button></td>
+                        <td><button class="btn-operator" id="backspace"><</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="7">7</button></td>
+                        <td><button class="btn-number" id="8">8</button></td>
+                        <td><button class="btn-number" id="9">9</button></td>
+                        <td><button class="btn-operator" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="4">4</button></td>
+                        <td><button class="btn-number" id="5">5</button></td>
+                        <td><button class="btn-number" id="6">6</button></td>
+                        <td><button class="btn-operator" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="1">1</button></td>
+                        <td><button class="btn-number" id="2">2</button></td>
+                        <td><button class="btn-number" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id="(">(</button></td>
+                        <td><button class="btn-number" id="0">0</button></td>
+                        <td><button class="btn-operator" id=")">)</button></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-    </body>
+    <script type="text/javascript" src="Calculator.js"></script>
+</body>
+
 </html>
